@@ -1,0 +1,144 @@
+.Table-gird {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  .user,
+  .header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    .btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        color: #fff;
+        margin: 0px 5px;
+        padding: 3px 15px;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        &:hover {
+          transform: scale(0.98);
+        }
+      }
+      .edit {
+        background-color: #24a1de;
+        &:hover {
+          background-color: #24a0decb;
+        }
+      }
+      .delete {
+        background-color: crimson;
+        &:hover {
+          background-color: rgba(220, 20, 60, 0.846);
+        }
+      }
+    }
+  }
+  .user {
+    p {
+      span {
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: #fff;
+      }
+      .Available {
+        background-color: rgba(0, 255, 0, 0.562);
+      }
+      .On.Break {
+        background-color: #8888887c;
+      }
+      .Coding {
+        background-color: #222;
+      }
+      .Out.of.Office {
+        background-color: rgba(220, 20, 60, 0.542);
+      }
+    }
+  }
+  .header-p {
+    color: #888;
+    margin-bottom: 20px;
+    border: none;
+  }
+  p {
+    color: #fff;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    object-fit: cover;
+  }
+}
+// .Table-gird {
+//   display: grid;
+//   grid-template-columns: repeat(6, 1fr);
+//   border: 1px solid #ddd;
+//   padding: 10px;
+//   width: 80%;
+//   margin: auto;
+//   border-radius: 10px;
+//   .header-p {
+//     color: #888;
+//     margin-bottom: 20px;
+//     border: none;
+//   }
+//   p {
+//     color: #fff;
+//     font-size: 19px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin: 5px;
+//     border-radius: 5px;
+//     padding: 5px;
+//     cursor: pointer;
+//     img {
+//       width: 40px;
+//       height: 40px;
+//       border-radius: 30%;
+//       object-fit: cover;
+//     }
+//   }
+//   .btns {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     button {
+//       color: #fff;
+//       margin: 0px 5px;
+//       padding: 3px 15px;
+//       border-radius: 7px;
+//       cursor: pointer;
+//       transition: all 0.3s ease-out;
+//       &:hover {
+//         transform: scale(0.98);
+//       }
+//     }
+//     .edit {
+//       background-color: #24a1de;
+//       &:hover {
+//         background-color: #24a0decb;
+//       }
+//     }
+//     .delete {
+//       background-color: crimson;
+//       &:hover {
+//         background-color: rgba(220, 20, 60, 0.846);
+//       }
+//     }
+//   }
+// }
