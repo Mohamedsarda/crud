@@ -12,26 +12,27 @@ const ConfirmDelete = ({
   const deleteUser = async () => {
     console.log(id);
 
-    // try {
-    //   const response = await fetch(`/api/users?id=${id}`, {
-    //     method: 'GET',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //   });
-    //   if (!response.ok) {
-    //     toast.error('Failed to delete user');
-    //     return;
-    //   } else {
-    //     const data = await response.json();
-    //     console.log(data);
+    try {
+      const response = await fetch(`/api/users/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      if (!response.ok) {
+        toast.error('Failed to delete user');
+        return;
+      } else {
+        const data = await response.json();
+        console.log(data);
 
-    //     toast.success(data.message);
-    //   }
-    // } catch (error) {
-    //   toast.error('Error deleting user');
-    //   return;
-    // }
+        toast.success(data.message);
+        HandleSetDeleteFalse();
+      }
+    } catch (error) {
+      toast.error('Error deleting user');
+      return;
+    }
   };
 
   return (

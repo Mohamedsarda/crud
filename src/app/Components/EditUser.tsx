@@ -14,7 +14,7 @@ interface UserData {
 }
 
 async function getUserDB(id: number): Promise<UserData> {
-  const res = await fetch(`/api/users?id=${id}`, {
+  const res = await fetch(`/api/users/${id}`, {
     method: 'GET',
   });
   if (!res.ok) {
@@ -65,7 +65,7 @@ const EditUser = ({
   if (loading) {
     return (
       <div className="EditUserContainer">
-        <div className="EditUser">
+        <div className="EditUserDelete">
           <div>Loading...</div>
         </div>
       </div>
@@ -92,7 +92,7 @@ const EditUser = ({
         <div className="bottom">
           <div className="left">
             <div className="row">
-              <label>User Name {user?.id}</label>
+              <label>User Name</label>
               <input
                 type="text"
                 value={user?.username || ''}

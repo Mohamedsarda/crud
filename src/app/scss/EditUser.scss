@@ -9,6 +9,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  .EditUserDelete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    width: 700px;
+    color: #fff;
+    background-color: #111111af;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
   .EditUser {
     width: 700px;
     height: 700px;
